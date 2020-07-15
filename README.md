@@ -1,2 +1,2 @@
 # perryhamiltonco
-Perry Hamilton Co. marketing 
+Perry Hamilton Co.
