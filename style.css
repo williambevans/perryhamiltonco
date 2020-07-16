@@ -1,0 +1,20 @@
+.vertical-center {
+    min-height: 100%;
+    /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh;
+    /* These two lines are counted as one :-)       */
+
+    display: flex;
+    align-items: center;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.9vw;
+    font-family: monospace;
+}
+
+.img-fluid {
+    margin-bottom: 3em;
+}
