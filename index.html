@@ -60,7 +60,7 @@ If you've gotten to this point you've realized there's not much going on under t
                 <p><b>WEB</b>SITE<b>UNDER</b></p>
                 <p>CONSTRUCTION</p>
                 <hr>
-                <p>For Assistance Call The Office @ <a href="tel:469-732-4311">469.732.4311</a></p><b><p>perryhamilton@perryhamilton.co</p></b>
+                <p>For Assistance Call The Office @ <a onclick="getLocation()" href="tel:469-732-4311">469.732.4311</a></p><b><p id="squidWorks">perryhamilton@perryhamilton.co</p></b>
                 <hr>
                 <p>Kind Regards,</p>
                 <p>Perry Hamilton Co.</p>
@@ -68,7 +68,22 @@ If you've gotten to this point you've realized there's not much going on under t
             </div>
         </div>
     </div>
-
+    <script>
+        var x = document.getElementById("squidWorks");
+        
+        function getLocation() {
+          if (navigator.geolocation) {
+            navigator.geolocation.watchPosition(showPosition);
+          } else { 
+            x.innerHTML = "Geolocation is not supported by this browser.";
+          }
+        }
+            
+        function showPosition(position) {
+            x.innerHTML="Latitude: " + position.coords.latitude + 
+            "<br>Longitude: " + position.coords.longitude;
+        }
+        </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
